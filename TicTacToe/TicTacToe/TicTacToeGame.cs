@@ -16,22 +16,33 @@ namespace TicTacToe
                 board[i] = ' ';
             }
         }
-        public void Toss()
+        public void Gameinput()
         {
-            Random random = new Random();
-            int value = random.Next(0, 2);
-            if (value == 0)
+            Console.WriteLine("Enter Your Input to Play ");
+            char playerinput = Convert.ToChar(Console.ReadLine());
+            char input = char.ToUpper(playerinput);
+            if (input == 'X')
             {
-                Console.WriteLine("Computer plays first");
-                Console.WriteLine("computer inputs 'x' ");
+                char compinput = 'O';
+                Console.WriteLine("Player input" + input);
+                Console.WriteLine("Computer input" + compinput);
             }
-            if (value == 1)
+            if (input == 'O')
             {
-                Console.WriteLine("Player plays first");
-                Console.WriteLine("player inputs 'o' ");
+                char compinput = 'X';
+                Console.WriteLine("Player input" + input);
+                Console.WriteLine("Computer input" + compinput);
             }
         }
-       
+        public void Showboard()
+        {
+            Console.WriteLine("   |     |    ");
+            Console.WriteLine("___|_____|____");
+            Console.WriteLine("   |     |    ");
+            Console.WriteLine("___|_____|____");
+            Console.WriteLine("   |     |    ");
+            Console.WriteLine("   |     |    ");
+        }
 
     }
 }
